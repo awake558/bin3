@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ `uname  -a | grep "x86_64" -o | uniq` == "x86_64" ] && [ `uname  -a | grep "Linux" -o | uniq` == "Linux" ] ; then
+	echo "x86_64 Linux"
+	PATH=$PATH:~/bin3/BaiduPCS-GO/BaiduPCS-Go-v3.5.6-linux-amd64
+elif  [ `uname  -a | grep "x86_64" -o | uniq` == "x86_64" ] && [ `uname  -a | grep "Cygwin" -o | uniq` == "Cygwin" ] ; then
+	echo "x86_64 Cygwin"
+	PATH=$PATH:~/bin3/BaiduPCS-GO/BaiduPCS-Go-v3.5.6-windows-x64
+else
+	echo "error !!"
+fi
+
+PATH=$PATH:~/bin3
