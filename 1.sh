@@ -1,18 +1,14 @@
 #!/bin/bash
 
-if [ -d $1 ] ; then
-	tar czf $1.tar.gz $1
-	rm -rf $1
-fi
 
+list=`ls`
+for i in $list
+	echo "$i ..."
+do
+	if [ -d $i ] ; then
+		tar czf $i.tar.gz $i
+		rm -rf $i
+	fi
+done
 
-if [ -d $2 ] ; then
-	tar czf $2.tar.gz $2
-	rm -rf $2
-fi
-
-if [ -d $3 ] ; then
-        tar czf $3.tar.gz $3
-        rm -rf $3
-fi
 
