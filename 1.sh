@@ -3,8 +3,8 @@
 
 list=`ls`
 for i in $list
-	echo "$i ..."
 do
+	echo "$i ..."
 	if [ -d $i ] ; then
 		tar czf $i.tar.gz $i
 		rm -rf $i
